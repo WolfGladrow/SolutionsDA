@@ -1,0 +1,22 @@
+print('file: SolutionPointEstVarVarNormal.R')
+#   Estimate uncertainty of sigma^2 from random sample of normal distribution
+#     variance sigma^2 = 4 EXERCISE (2/2016)
+set.seed(1953)
+M = 1000   # number of Monte-Carlo runs
+n = 5      # sample size
+varest = numeric(M)
+for (m in 1:M) varest[m]=var(rnorm(n,mean=0,sd=2))
+# for (m in 1:M) varest[m]=var(rnorm(n,mean=0,sd=3))
+# png('MCvarNormalExercise160227.png',width=16,height=12,units='cm',res=300)
+hist(varest,30,col='blue',xlab='Estimate of population variance',main='',las=1,cex.lab=1.5)
+meanvarest = mean(varest); print(c('meanvarest = ',meanvarest))  # (expected: close to sigma^2 = 4)
+varvarest = var(varest); print(c('varvarest = ',varvarest))      # (no expectation)
+sdvarest = sd(varest); print(c('sdvarest = ',sdvarest))
+print(c('varEst2/varEst1 = ',varvarest/0.5584831)) 
+text(14,140,'mean of estimate',col='blue',cex=1.5)
+text(14,125,paste('= ',as.character(round(meanvarest,3))),col='blue',cex=1.5)
+text(14,100,'variance of estimate',col='blue',cex=1.5)
+text(14,85,paste('= ',as.character(round(varvarest,3))),col='blue',cex=1.5)
+text(14,60,'sd of estimate',col='blue',cex=1.5)
+text(14,45,paste('= ',as.character(round(sdvarest,3))),col='blue',cex=1.5)
+# dev.off()
