@@ -2,7 +2,6 @@ print('file: SolutionAlphaBIC.R')
 # EXERCISE & SOLUTION: alpha for AIC etc., Dziak et al. (2018, Table 2, p.12) 
 AnAIC = 2
 alphaAIC = 1-pchisq(AnAIC,1)
-# n = c(10,50,100,500,1e3,5000,1e4,5e4,1e5)
 n = c(10,30,100,300,1e3,3000,1e4)
 L = length(n)
 alphaAICa = rep(alphaAIC,L)
