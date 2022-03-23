@@ -1,4 +1,4 @@
-print('file: SolutionMDintegralMultiple.R')
+print('file: SolutionMDintegrateMultiple.R')
 # EXERCISE & SOLUTION: double integral over f(x,y; alpha, beta): covariance matrix
 # f(x,y; \alpha, \beta) = \frac{24}{4\alpha + 3\beta}(\alpha x^2 y + \beta x y^3)
 alpha=3;beta=2
@@ -28,7 +28,7 @@ xa = seq(0,1,0.02); ya = xa; L = length(xa)
 f = matrix(data=NA,nrow=L,ncol=L)
 # install.packages('plot3D')
 library(plot3D)
-sflag = 3
+sflag = 1
 if (sflag == 1) {  # cov(x,x)
   for(m in 1:L) {
     for(n in 1:L) f[m,n] = f4(c(xa[m],ya[n]),alpha,beta)}
