@@ -7,8 +7,8 @@ M = 1e5   # number of Monte Carlo runs
 mu1 = 2; mu2 = 1.5; sigma1 = 2; sigma2 = 1;
 c1 = 3.2; c2 = 2.7
 d = c1*rnorm(M,mu1,sigma1) - c2*rnorm(M,mu2,sigma2)
-# png('NormalLinCombi160107.png',width=16,height=12,units='cm',res=300)
-hist(d,300,col='blue',xlab='Linear combination',main='',las=1)
+# png('NormalLinCombi160107.png',width=16,height=16,units='cm',res=300)
+hist(d,300,col='blue',xlab='Linear combination',main='',las=1,cex.lab=1.5)
 # dev.off()
 # ---------------------------------------------------------------------------
 mudguess = c1*mu1-c2*mu2; print(c(mudguess,'mean difference (guess)'))    
