@@ -1,4 +1,4 @@
-print('file: SolutionPDs-F-versus-Normal.R')
+print('file: SolutionPDsPDFs-F-versus-Normal.R')
 # EXERCISE & Solution: compare F & normal
 dx=0.01; xarr = seq(dx,2,dx)
 nu1=100; nu2=100   # degrees of freedom
