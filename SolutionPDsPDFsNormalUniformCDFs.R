@@ -1,4 +1,4 @@
-print('file: SolutionPDsPDFsNormaUniformCDFs.R')
+print('file: SolutionPDsPDFsNormalUniformCDFs.R')
 # EXERCISE & SOLUTION: CDFs for standard normal & standardized uniform PDF
 x = seq(-3,3,0.01); CDFnormal = pnorm(x)                   # coarse resolution
 b = sqrt(3); xu = c(-3,-b,b,3); CDFuniformN = c(0,0,1,1)
