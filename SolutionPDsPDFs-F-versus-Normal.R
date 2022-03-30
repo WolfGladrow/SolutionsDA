@@ -8,10 +8,9 @@ sigma = sqrt(2*nu2^2*(nu1+nu2-2)/nu1/(nu2-2)^2/(nu2-4)); print(c(round(sigma,4),
 muEst = sum(xarr*fPDF)*dx; print(c(round(muEst,4),'muEst'))
 sigEst = sqrt(sum((xarr-muEst)^2*fPDF)*dx); print(c(round(sigEst,4),'sigEst'))
 N = dnorm(x=xarr,mean=mu,sd=sigma);
-# png('ExerFandNormal220228.png',width=16,height=12,units='cm',res=300)
-plot(xarr,fPDF,type='l',lwd=3,col='blue',xlab='x',ylab=NA,las=1,cex.lab=1.5)
-title(ylab='F & standard normal PDF',cex.lab=1.5,line=2.3)
+# png('ExerFandNormal220228.png',width=16,height=16,units='cm',res=300)
+plot(xarr,fPDF,type='l',lwd=3,col='blue',xlab='x',ylab='Density',las=1,cex.lab=1.5)
 lines(xarr,N,col='red',lwd=3,lty=2)
 legend('topleft',legend=c('F','normal'),col=c('blue','red'),
-       lty=c(1,2),lwd=c(3,3))
+       lty=c(1,2),lwd=c(3,3),cex=1.5)
 # dev.off()
