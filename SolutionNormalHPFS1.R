@@ -1,4 +1,4 @@
-print('file: SolutionNormalHPFS1a.R')
+print('file: SolutionNormalHPFS1.R')
 # EXERCISE & SOLUTION: exHPFSM1603 (part 1)
 # Jaynes (2003, p.~189) remarked that 'any function with a single rounded 
 # maximum raised to a higher and higher power, goes into a Gaussian function'. 
