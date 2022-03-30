@@ -4,8 +4,9 @@ print('file: SolutionPDsPDFsNormalProperties.R')
 #     areas for ranges $\pm n\, \sigma$ with $n = 1,2,3$, 66\%, 95\% and 99\% level.
 library(latex2exp)
 x = seq(-3,3,0.01); y = dnorm(x)
-# png('exPropNormal220225.png',width=16,height=12,units='cm',res=300)
-plot(x,y,type='l',xlab='x',ylab='Standard normal distribution',col='blue',lwd=3,las=1) 
+# png('exPropNormal220225.png',width=16,height=16,units='cm',res=300)
+plot(x,y,type='l',xlab='x',ylab='Standard normal distribution',col='blue',lwd=3,
+     las=1,cex.lab=1.5) 
 text(-2,0.35,TeX('$\\mu = 0$'),col='blue',cex=1.5)
 text(-2,0.3,TeX('$\\sigma = 1$'),col='blue',cex=1.5)
 q = 0.99              # find 99% level:
