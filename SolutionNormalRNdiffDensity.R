@@ -6,9 +6,9 @@ M = 1e5   # number of Monte Carlo runs
 mu1 = 2; mu2 = 1; sigma1 = 2; sigma2 = 3;
 set.seed(1953) # set seed for random number generators
 d = rnorm(M,mu1,sigma1) - rnorm(M,mu2,sigma2)
-# png('diffNormalDens160818.png',width=16,height=12,units='cm',res=300)
+# png('diffNormalDens160818.png',width=16,height=16,units='cm',res=300)
 plot(density(d,from=-11,to=11),type='l',lwd=3,col='blue',main='',
-       xlab='Difference X - Y',ylab='Density estimate',las=1,xlim=c(-10,10))
+       xlab='Difference X - Y',ylab='Density estimate',las=1,xlim=c(-10,10),cex.lab=1.5)
 # dev.off()
 # ---------------------------------------------------------------------------
 mudguess = mu1-mu2; print(c(mudguess,'mean difference (guess)'))          # 1

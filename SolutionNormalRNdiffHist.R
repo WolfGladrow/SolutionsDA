@@ -6,8 +6,8 @@ M = 1e5   # number of Monte Carlo runs
 mu1 = 2; mu2 = 1; sigma1 = 2; sigma2 = 3;
 set.seed(1953) # set seed for random number generators
 d = rnorm(M,mu1,sigma1) - rnorm(M,mu2,sigma2)
-# png('diffNormal160106.png',width=16,height=12,units='cm',res=300)
-hist(d,300,col='blue',xlab='Difference X - Y',main='',las=1)
+# png('diffNormal160106.png',width=16,height=16,units='cm',res=300)
+hist(d,300,col='blue',xlab='Difference X - Y',main='',las=1,cex.lab=1.5)
 # dev.off()
 # ---------------------------------------------------------------------------
 mudguess = mu1-mu2; print(c(mudguess,'mean difference (guess)'))          # 1
