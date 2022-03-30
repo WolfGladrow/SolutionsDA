@@ -15,9 +15,8 @@ var1 = sum( (x-mu1)^2*y10normalized)*dx   # 0.09066148
 y10normalapprox = dnorm(x,mean=mu1,sd=sqrt(var1))
 # (c) plot normalized y10 and normal approximation
 # png('exHPFSM1603Part2.png',width=16,height=12,units='cm',res=300)
-plot(x,y10normalized,type='l',lwd=2,col='blue',xlab='x',
-     ylab='PDFs, difference',
-     ylim=c(0,max(y10normalapprox)*1.03),las=1) #,xaxs='i',yaxs='i',las=1)
+plot(x,y10normalized,type='l',lwd=2,col='blue',xlab='x',ylab='PDFs, difference',
+     ylim=c(0,max(y10normalapprox)*1.03),las=1,cex.lab=1.5)
 lines(x,y10normalapprox,col='red',lwd=2,lty=2)
 d = y10normalapprox-y10normalized
 lines(x,d,col='black',lwd=1,lty=1)
