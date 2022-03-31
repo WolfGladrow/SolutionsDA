@@ -7,10 +7,10 @@ h = pk[1]; print(c(round(h,4),'h'))
 k2 = seq(1,100) # number of trials until first success
 pgeo = dgeom(k2-1,h)
 di = pgeo[1:n]-pk
-# png('BrokenStickGeo200830.png',width=16,height=12,units='cm',res=300)
-plot(karr,pk,type='p',lwd=3,col='black',xlab='k',
-     ylab='Broken stick probabilities',las=1,cex=0.4,ylim=c(min(di),0.3))
-points(k2,pgeo,lwd=3,col='red',cex=0.4,pch=24)
+# png('BrokenStickGeo200830.png',width=16,height=16,units='cm',res=300)
+plot(karr,pk,type='p',lwd=4,col='black',xlab='k',
+     ylab='Probability, difference',las=1,cex=0.6,ylim=c(min(di),0.3),cex.lab=1.5)
+points(k2,pgeo,lwd=4,col='magenta',cex=0.6,pch=24)
 abline(h=0,col='green',lty=2)
-points(karr,di,col='blue',lwd=3,cex=0.4,pch=22)
+points(karr,di,col='blue',lwd=4,cex=0.6,pch=22)
 # dev.off()
