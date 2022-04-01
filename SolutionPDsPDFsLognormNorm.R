@@ -14,8 +14,9 @@ alpha = out[1]; beta = out[2]
 x = 1:1000
 y = dlnorm(x,alpha,beta)
 yn = dnorm(x,mu,sigma)
-# png('LognormalNormal220301.png',width=16,height=12,units='cm',res=300)
-plot(x,y,type='l',lwd=3,col='blue',xlab='x',ylab='',las=1,cex=0.4,cex.lab=1.5)
+# png('LognormalNormal220301.png',width=16,height=16,units='cm',res=300)
+plot(x,y,type='l',lwd=4,col='blue',xlab='x',ylab='Density',las=0,cex.lab=1.5)
 lines(x,yn,col='red',lty=2)
-legend('topright',legend=c('log-normal','normal'),col=c('blue','red'),lty=c(1,2),lwd=c(3,1))
+legend('topright',legend=c('log-normal','normal'),col=c('blue','red'),lty=c(1,2),
+       lwd=c(4,1),cex=1.5)
 # dev.off()
