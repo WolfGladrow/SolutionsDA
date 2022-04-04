@@ -1,4 +1,4 @@
-print('file: BernoulliTheoremMC.R')
+print('file: SolutionBernoulliTheoremMC.R')
 # Bernoulli theorem & Monte Carlo
 # Estimation:
 # n -> x_1, ..., x_n -> pEst = mean(x) +- mean(x)/est(sigma)
