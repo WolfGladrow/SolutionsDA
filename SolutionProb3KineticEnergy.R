@@ -1,5 +1,5 @@
 print('file: SolutionProb3KineticEnergy.R')
-# EXERCISE: particles with 3 kinetic energies
+# EXERCISE & SOLUTION: particles with 3 kinetic energies
 # The mean energy Emean can vary between 1 and 9. Calculate and
 # plot the probabilities pj, j=1,2,3 over this energy range.
 Ea = seq(1,9,0.1); L = length(Ea)
@@ -16,10 +16,10 @@ p1[k] = exp(-1+lambda0+lambda1);
 p2[k] = exp(-1+lambda0+lambda1*4);
 p3[k] = exp(-1+lambda0+lambda1*9)}
 library(latex2exp)
-# png('E3particles171213.png',width=16,height=12,units='cm',res=300)
-plot(Ea,p1,type='l',lwd=3,col='blue',xlab='Mean energy',ylab=NA,las=1,cex=0.4)
-title(ylab=TeX('$Probabilities\\, p_1,\\, p_2,\\, p_3$'),line=2.5)
-#        ylab='Probabilities p1, p2, p3',las=1,cex=0.4)
+# png('E3particles171213.png',width=16,height=16,units='cm',res=300)
+plot(Ea,p1,type='l',lwd=3,col='blue',xlab='Mean energy',
+     ylab=NA,las=1,cex=0.4,cex.lab=1.5)
+title(ylab=TeX('$Probabilities\\, p_1,\\, p_2,\\, p_3$'),line=2.5,cex.lab=1.5)
 lines(Ea,p2,col='black',lwd=3,lty=2)
 lines(Ea,p3,col='red',lwd=3,lty=4)
 # dev.off()
