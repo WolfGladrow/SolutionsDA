@@ -11,6 +11,6 @@ a = seq(0,2,0.01); L = length(a)
 VarW = numeric(L); Wa = numeric(M)
 for(k in 1:L) {Wa=a[k]*muest+(1-a[k])*varest; VarW[k] = var(Wa)}
 aopt = a[which.min(VarW)]
-# png('PoissonWa161224.png',width=16,height=12,units='cm',res=300)
-plot(a,VarW,type='l',lwd=3,col='blue',xlab='a',ylab='VarW',las=1,cex.lab=1.5)
+# png('PoissonWa161224.png',width=16,height=16,units='cm',res=300)
+plot(a,VarW,type='l',lwd=4,col='blue',xlab='a',ylab='VarW',las=1,cex.lab=1.5)
 # dev.off()
