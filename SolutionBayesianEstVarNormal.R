@@ -43,7 +43,7 @@ I95L = x[which.min((CDF-ahalf)^2)]; print(c(round(I95L,4),'I95L'))
 I95U = x[which.min((CDF-(1-ahalf))^2)]; print(c(round(I95U,4),'I95U'))
 xI95 = c(I95L,I95U); yI95 = c(0,0)
 library(latex2exp)
-# png('PosteriorNormalMuKnown210618.png',width=16,height=12,units='cm',res=300)
+# png('PosteriorNormalMuKnown210618.png',width=16,height=16,units='cm',res=300)
 plot(x,IG,type='l',lwd=3,col='blue',xlab=NA,ylab=NA,las=1,
      cex=0.4,xlim=c(0,10))
 title(ylab=TeX('Inverse gamma PDF $(\\sigma^2 | y, \\mu_0)$'),line=2.3,cex.lab=1.5)
