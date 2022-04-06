@@ -9,23 +9,21 @@ fPredict=pPredict*sum(frequencies)  # predicted frequencies
 # ---------- plots:
 sflag = 1
 if (sflag == 1) {
-  # png('DustCounterF170720.png',width=16,height=12,units='cm',res=300)
-  plot(ja,frequencies,type='p',col='red',xlab='Number of events j',ylab='',
-       main='',lwd=3,cex=0.5,las=1,cex.lab=1.5)
-  title(ylab='Frequencies',line=2.5,cex.lab=1.5)
-  points(ja,fPredict,col='blue',lwd=2,cex=0.5)
-  text(5.6,80,pos=4,expression(paste(hat(lambda))),col='red',cex=1.5)
-  text(6.0,80,pos=4,paste('= ',as.character(round(lambdaEst,3))),col='red',cex=1.5)
+  # png('DustCounterF170720.png',width=16,height=16,units='cm',res=300)
+  plot(ja,frequencies,type='p',col='black',xlab='Number of events j',ylab='',
+       main='',lwd=4,cex=0.6,las=1,cex.lab=1.5)
+  title(ylab='Frequency',line=2.5,cex.lab=1.5)
+  points(ja,fPredict,col='magenta',lwd=4,cex=0.6,pch=24)
+  text(5.6,80,pos=4,bquote(~hat(lambda) == .(lambdaEst)),col='magenta',cex=1.5)
   # dev.off()
 }
 if (sflag == 2) {
-  # png('DustCounterP170720.png',width=16,height=12,units='cm',res=300)
-  plot(ja,relfre,type='p',col='red',las=1,cex=0.5,main='',xlab='Number of events j',
-       ylab='',lwd=3,cex.lab=1.5)
-  title(ylab='Probabilities,relative frequencies',line=2.8,cex.lab=1.5)
-  points(ja,pPredict,col='blue',lwd=2,cex=0.5)
-  text(5.6,0.2,pos=4,expression(paste(hat(lambda))),col='red',cex=1.5)
-  text(6.0,0.2,pos=4,paste('= ',as.character(round(lambdaEst,3))),col='red',cex=1.5)
+  # png('DustCounterP170720.png',width=16,height=16,units='cm',res=300)
+  plot(ja,relfre,type='p',col='black',las=0,cex=0.6,main='',xlab='Number of events j',
+       ylab='',lwd=4,cex.lab=1.5)
+  title(ylab='Probability, relative frequency',line=2.8,cex.lab=1.5)
+  points(ja,pPredict,col='magenta',lwd=4,cex=0.6,pch=24)
+  text(5.6,0.2,pos=4,bquote(~hat(lambda) == .(lambdaEst)),col='magenta',cex=1.5)
   # dev.off()
 }
 # ---------------------------------------------------
