@@ -30,14 +30,14 @@ for(k in 1:L) {muMax = muMaxa[k];
 library(latex2exp)
 sflag = 1
 if (sflag == 1) {
-  # png('NLFb181206.png',width=16,height=12,units='cm',res=300) # sigMax = 20
+  # png('NLFb181206.png',width=16,height=16,units='cm',res=300) # sigMax = 20
   plot(muMaxa,z,type='l',lwd=3,col='blue',xlab=TeX('$\\mu_{max}$'),
        ylab='Integral',las=1,cex=0.4,cex.lab=1.5)
   text(30,6,TeX('$\\sigma_{max} = 20$'),col='black',cex=1.5)
   # dev.off()
 }
 if (sflag == 2) {
-  # png('NLFNb181206.png',width=16,height=12,units='cm',res=300) # sigMax = 20
+  # png('NLFNb181206.png',width=16,height=16,units='cm',res=300) # sigMax = 20
   plot(muMaxa,zn,type='l',lwd=3,col='blue',xlab=TeX('$\\mu_{max}$'),
        ylab='Integral (normalized)',las=1,cex=0.4,cex.lab=1.5)
   text(30,0.6,TeX('$\\sigma_{max} = 20$'),col='black',cex=1.5)
