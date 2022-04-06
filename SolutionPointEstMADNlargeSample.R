@@ -8,10 +8,12 @@ M = 1000   # number of Monte-Carlo runs
 n = 1000      # sample size
 sdest = numeric(M)
 for(m in 1:M) {x=rnorm(n); sdest[m]=median(abs(x-median(x)))/0.6745}
-#  png('ExerMCmadnNormal160819.png',width=16,height=12,units='cm',res=300)
+# png('ExerMCmadnNormal160819.png',width=16,height=16,units='cm',res=300)
 hist(sdest,30,col='blue',xlab='MADN',main='',las=1,cex.lab=1.5)
 meansdest = mean(sdest); print(c(round(meansdest,3),'meansdest'))  # (expected: close to sigma = 1)
 sdsdest = sd(sdest); print(c(round(sdsdest,3),'sdsdest'))
+abline(v=1,col='black',lty=1)
+abline(v=meansdest,col='blue',lty=4)
 xt = 0.93
 text(xt,95,'mean of estimate',col='blue',cex=1.5)
 text(xt,85,paste('= ',as.character(round(meansdest,4))),col='blue',cex=1.5)
@@ -22,5 +24,5 @@ text(1.07,85,paste('M = ',as.character(M)),col='black',cex=1.5)
 # dev.off()
 # ---------------------------------------------------
 # Results: 
-print(c('mean_sd_est = ',round(meansdest,4)))  # 0.9997
-print(c('  sd_sd_est = ',round(sdsdest,4)))    # 0.0363
+print(c('mean_sd_est = ',round(meansdest,4)))
+print(c('  sd_sd_est = ',round(sdsdest,4)))
