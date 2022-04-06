@@ -11,12 +11,12 @@ print(c(round(sd(y),4),'sd(y)'))
 xmean = mean(x); ymean = mean(y)
 sflag = 1
 if (sflag == 2) {
-  # png('HistyExer200708.png',width=16,height=12,units='cm',res=300)
+  # png('HistyExer200708.png',width=16,height=16,units='cm',res=300)
   hist(y,breaks=20,col='blue',main='',las=1,cex.lab=1.5)
   # dev.off()
 }
 if (sflag == 1) {
-  # png('HistxExer200708.png',width=16,height=12,units='cm',res=300)
+  # png('HistxExer200708.png',width=16,height=16,units='cm',res=300)
   hist(x,breaks=20,col='blue',main='',las=1,cex.lab=1.5)
   # dev.off()
 }
