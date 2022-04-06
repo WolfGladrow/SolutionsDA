@@ -29,18 +29,18 @@ upEstm = sd(pEst,na.rm=TRUE); print(c(round(upEstm,3),' upEstm'))
 library(latex2exp)
 sflag = 1
 if (sflag == 1) {
-  # png('BinomEstkMoM181228.png',width=16,height=12,units='cm',res=300)
+  # png('BinomEstkMoM181228.png',width=16,height=16,units='cm',res=300)
   hist(kEst,col='blue',breaks=33,las=1,main='',xlab=expression(hat(k)),cex.lab=1.5)
-  abline(v=k,col='magenta')
-  abline(v=kEstm,col='blue')
-  text(11,75,paste('k = ',as.character(k)),col='magenta',pos=4,cex=1.5)
+  abline(v=k,col='black')
+  abline(v=kEstm,col='blue',lty=4)
+  text(11,75,paste('k = ',as.character(k)),col='black',pos=4,cex=1.5)
   text(11,60,TeX('$\\hat{k} = 8.89 \\pm 3.43$'),col='blue',pos=4,cex=1.5)
   text(11,45,paste('n = ',as.character(n)),col='blue',pos=4,cex=1.5)
   text(11,30,paste('M = ',as.character(M)),col='blue',pos=4,cex=1.5)
   # dev.off()
 }
 if (sflag == 2) {
-  # png('BinomEstpMoM181228.png',width=16,height=12,units='cm',res=300)
+  # png('BinomEstpMoM181228.png',width=16,height=16,units='cm',res=300)
   hist(pEst,col='blue',breaks=33,las=1,main='',xlab=expression(hat(p)),cex.lab=1.5)
   abline(v=p,col='magenta')
   abline(v=pEstm,col='blue')
