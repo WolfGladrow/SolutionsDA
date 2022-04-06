@@ -20,7 +20,7 @@ sfMC = sd(rf); print(c(round(sfMC,4),'sfMC'))          # standard deviation
 medianMC = median(rf); print(c(round(medianMC,4),'medianMC'))
 #  Normalized Median Absolute Deviation (MADN) estimate:
 sfMCrobust= median(abs(rf-median(rf)))/0.6745; print(c(round(sfMCrobust,4),'sfMCrobust'))
-# png('MCxyDensity161204.png',width=16,height=12,units='cm',res=300)
+# png('MCxyDensity161204.png',width=16,height=16,units='cm',res=300)
   plot(density(rf,from=0.5,to=6.5),type='l',col='blue',main='',las=1,
        xlab='f(rx,ry) = rx*ry',lwd=3,xlim=c(1,6),cex.lab=1.5)
   xp = seq(0,15,0.01)
@@ -30,6 +30,5 @@ sfMCrobust= median(abs(rf-median(rf)))/0.6745; print(c(round(sfMCrobust,4),'sfMC
   lines(xp,yp,col='red',lty=2,lwd=2)
   text(3,0.2,paste('M = ',as.character(M)),col='blue',cex=1.5,pos=1)
   legend('bottom',legend=c('MC estimate','normal (MC mean)','normal (analytic mean)'),
-         col=c('blue','black','red'),
-         lty=c(1,4,2),lwd=c(3,1,2))
+         col=c('blue','black','red'),lty=c(1,4,2),lwd=c(3,1,2))
 # dev.off()
