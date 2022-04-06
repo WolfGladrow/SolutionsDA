@@ -42,9 +42,9 @@ if (sflag == 1) {
 if (sflag == 2) {
   # png('BinomEstpMoM181228.png',width=16,height=16,units='cm',res=300)
   hist(pEst,col='blue',breaks=33,las=1,main='',xlab=expression(hat(p)),cex.lab=1.5)
-  abline(v=p,col='magenta')
-  abline(v=pEstm,col='blue')
-  text(0.2,50,paste('p = ',as.character(p)),col='magenta',pos=4,cex=1.5)
+  abline(v=p,col='black')
+  abline(v=pEstm,col='blue',lty=4)
+  text(0.2,50,paste('p = ',as.character(p)),col='black',pos=4,cex=1.5)
   text(0.6,50,TeX('$\\hat{k} = 0.506 \\pm 0.163$'),col='blue',pos=4,cex=1.5)
   text(0.73,40,paste('n = ',as.character(n)),col='blue',pos=4,cex=1.5)
   text(0.73,30,paste('M = ',as.character(M)),col='blue',pos=4,cex=1.5)
