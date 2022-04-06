@@ -6,9 +6,8 @@ h=function(x){(cos(23*x)+sin(38*x))^2}
 a = 38; b = 23
 Ianalytic = 1-sin(2*a)/(4*a)+sin(2*b)/(4*b)-
   cos(a-b)/(a-b)-cos(a+b)/(a+b)+1/(a-b)+1/(a+b) # 1.144015
-# png('MCintEXERCISE160811.png',width=16,height=12,units='cm',res=300)
-out1 = integrate(h,0,1) # 1.144015 with absolute error < 2e-05
-Inumeric = out1$value   #  1.144015
+# png('MCintEXERCISE160811.png',width=16,height=16,units='cm',res=300)
+Inumeric = integrate(h,0,1)$value
 par(mar=c(4.1,4.5,1,1),mfrow=c(2,1))
 curve(h,ylab='Function',xlab='x',lwd=2,las=1,col='blue',cex.lab=1.5)
 x=h(runif(10^4))
