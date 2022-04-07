@@ -12,7 +12,7 @@ out1 = cor.test(CO2,O2); p1 = out$p.value; print(c(p1,'p1'))
 library(fBasics)
 out2 = correlationTest(CO2,O2); p2 = 2.2e-16; print(c(p2,'p2'))
 out3 = pearsonTest(CO2,O2); p3 = 2.2e-16; print(c(p3,'p3'))
-# png('Keeling88Fig5cor.png',width=16,height=12,units='cm',res=300)
+# png('Keeling88Fig5cor.png',width=16,height=16,units='cm',res=300)
 plot(CO2,O2,type='p',lwd=4,col='blue',
      xlab='dX_CO2 (ppm)',ylab='dX_O2 (ppm)',las=1,cex=0.6,cex.lab=1.5)
 # dev.off()
