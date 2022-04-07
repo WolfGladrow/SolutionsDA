@@ -20,13 +20,13 @@ for(j in 1:LF) {Fobs = Fobsa[j]; k = which.min((xd-Fobs)^2);
 }
 sflag = 1
 if(sflag == 1) {
-  # png('VarTextExer171225.png',width=16,height=12,units='cm',res=300)
-  plot(Fobsa,pa,type='l',lwd=4,col='blue',xlab='F',ylab='p, pMC',las=1,cex=0.6,
+  # png('VarTextExer171225.png',width=16,height=16,units='cm',res=300)
+  plot(Fobsa,pa,type='l',lwd=4,col='blue',xlab='F',ylab='p, pMC',las=1,
        cex.lab=1.5,lty=4)
   abline(a=0.05,b=0,col='green',lty=2)
   lines(Fobsa,pMCa,col='black',lwd=3)
   legend('topleft',c('Monte Carlo','F(x;10,9)'),lwd=c(3,3),
-         col=c('black','blue'),lty=c(1,4))
+         col=c('black','blue'),lty=c(1,4),cex=1.5)
   # dev.off()
 }
 alpha = 0.05
