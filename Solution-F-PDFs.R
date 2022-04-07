@@ -11,5 +11,5 @@ title(ylab=expression(paste('F(x; ',nu[1],'=3',',',nu[2],'=15), F(x; ',nu[1],'=1
       line=2.3,cex.lab=1.5)
 lines(x1,F2,col='black',lwd=4,lty=4)
 legend('topright',legend=c('F(x;3,15)','F(x;15,3)'),col=c('blue','black'),
-       lty=c(1,4),lwd=c(3,3))
+       lty=c(1,4),lwd=c(3,3),cex=1.5)
 # dev.off()
