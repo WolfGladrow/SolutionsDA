@@ -29,8 +29,8 @@ if(BF <= 0.1)                  print('strong evidence against H1/strong evidence
 # ---------------------------------------------------------------------
 sflag = 3
 if (sflag == 3) {
-  # png('WormsHist180325.png',width=16,height=12,units='cm',res=300)
-  par(mfrow=c(2,1))
+  # png('WormsHist180325.png',width=16,height=16,units='cm',res=300)
+  par(mar=c(4.1,4.5,1,1),mfrow=c(2,1))
   hist(yd,col='blue',las=1,main='',xlab='treated',cex.lab=1.5)
   hist(yu,col='blue',las=1,main='',xlab='untreated',cex.lab=1.5)
   # dev.off()
