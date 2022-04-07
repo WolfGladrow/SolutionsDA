@@ -1,4 +1,4 @@
-print('file: Solution-2-sample-EqualMeans.R')
+print('file: Solution-2-sampleEqualMeans.R')
 # Equal means: various 2-sample tests; data: Ott & Longnecker (2001, p. 272-274)
 yd = c(18,43,28,50,16,32,13,35,38,33,6,7)
 yu = c(40,54,26,63,21,37,39,23,48,58,28,39)
