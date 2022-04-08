@@ -25,7 +25,7 @@ if (sflag == 1) {
   p = outKS$p.value; print(c(round(p,4),'p-value'))
   xmax = 3; xmin = -xmax
   xH0 = seq(xmin,xmax,0.0001); yH0 = pnorm(xH0,mean(y),sd(y)) # CDF of normal distribution
-  # png('KSexampleA160915.png',width=16,height=12,units='cm',res=300)
+  # png('KSexampleA160915.png',width=16,height=16,units='cm',res=300)
   Dp = plotstaircaseKS(sort(y),xmin,xmax,xH0,yH0)
   xt = 1
   text(xt,0.4,paste('D = ',as.character(round(D,3))),col='blue',cex=1.5,pos=4)
@@ -43,7 +43,7 @@ if (sflag == 2) {
   xmax = 4.5; xmin = -xmax
   xH0 = seq(xmin,xmax,0.0001); yH0 = pnorm(xH0,mean(y),sd(y))
   source('plotstaircaseKS.R')
-  # png('KSexampleB160915.png',width=16,height=12,units='cm',res=300)
+  # png('KSexampleB160915.png',width=16,height=16,units='cm',res=300)
   Dp = plotstaircaseKS(sort(y),xmin,xmax,xH0,yH0)
   xt = 1
   text(xt,0.4,paste('D = ',as.character(round(D,3))),col='blue',cex=1.5,pos=4)
@@ -61,7 +61,7 @@ if (sflag == 3) {
   xmax = 3; xmin = -xmax
   xH0 = seq(xmin,xmax,0.0001); yH0 = pnorm(xH0,mean(y),sd(y))
   source('plotstaircaseKS.R')
-  # png('KSy3example170711.png',width=16,height=12,units='cm',res=300)
+  # png('KSy3example170711.png',width=16,height=16,units='cm',res=300)
   Dp = plotstaircaseKS(sort(y),xmin,xmax,xH0,yH0)
   xt = 1
   text(xt,0.4,paste('D = ',as.character(round(D,3))),col='blue',cex=1.5,pos=4)
