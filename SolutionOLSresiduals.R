@@ -20,7 +20,7 @@ out1 = summary(out)
 r = out1$residuals
 sflag = 1
 if(sflag == 1) {
-  # png('NO3vsPO4Resi171226.png',width=16,height=12,units='cm',res=300)
+  # png('NO3vsPO4Resi171226.png',width=16,height=16,units='cm',res=300)
   plot(density(r,from=-5,to=5),col='blue',xlab='Residuals',
        ylab='Density',lwd=3,main='',las=1,cex.lab=1.5,xlim=c(-4,4))
   xp = seq(-5,5,0.01)
