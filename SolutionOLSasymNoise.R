@@ -31,14 +31,14 @@ for(m in 1:mMax) {
 }
 sflag = 1
 if (sflag == 1) {
-  # png('Gauss-MarkovSlope200925.png',width=16,height=12,units='cm',res=300)
+  # png('Gauss-MarkovSlope200925.png',width=16,height=16,units='cm',res=300)
   plot(mArr,SL,type='p',lwd=4,col='blue',xlab='m',ylab='Slope',las=1,cex=0.6,cex.lab=1.5)
   abline(h=beta1,col='green',lty=4)
   points(mArr,SL,lwd=4,col='blue',cex=0.6)
   # dev.off()
 }
 if (sflag == 2) {
-  # png('Gauss-MarkovIntercept200925.png',width=16,height=12,units='cm',res=300)
+  # png('Gauss-MarkovIntercept200925.png',width=16,height=16,units='cm',res=300)
   plot(mArr,IC,type='p',lwd=4,col='blue',xlab='m',ylab='Intercept',las=1,cex=0.6,cex.lab=1.5)
   abline(h=beta0,col='green',lty=4)
   points(mArr,IC,lwd=4,col='blue',cex=0.6)

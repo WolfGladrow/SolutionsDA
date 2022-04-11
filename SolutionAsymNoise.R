@@ -23,7 +23,7 @@ varEst = var(rArr); print(c(round(varEst,4),'varEst'))
 print(c(round(s/M,4),'s/M (should be close to 0.2)'))
 sflag = 1
 if (sflag == 1) {
-  # png('ExerciseAsymPDF200923.png',width=16,height=12,units='cm',res=300)
+  # png('ExerciseAsymPDF200923.png',width=16,height=16,units='cm',res=300)
   hist(rArr,main='',breaks=30,las=0,col='blue',xlab='z',cex.lab=1.5)
   text(-2,6500,paste('M = ',as.character(M)),col='blue',pos=4,cex=1.5)
   text(-2,5500,paste('meanEst = ',as.character(round(meanEst,4))),col='blue',pos=4,cex=1.5)
