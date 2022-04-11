@@ -1,5 +1,7 @@
 print('file: SolutionOLSresiduals.R')
 # EXERCISE & SOLUTION: residuals of OLS, NO3 over PO4, whole ocean
+# install.packages('ncdf4')
+library(ncdf4)
 infoNO3.nc = nc_open('nitrate_annual_1deg.nc')
 infoPO4.nc = nc_open('phosphate_annual_1deg.nc')
 NO3 = ncvar_get( infoNO3.nc, 'n_an')
