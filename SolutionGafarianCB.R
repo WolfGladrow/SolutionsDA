@@ -124,7 +124,7 @@ CBBow66L = b0+b1*xNarrow-deltaB66*S
 # ---------------------------------------------------
 sflag = 2
 if (sflag == 2) { # data \& Scheffe \& Gafarian \& single point CI
-  # png('ConfidenceBands200628NI.png',width=16,height=12,units='cm',res=300)
+  # png('ConfidenceBands200628NI.png',width=16,height=16,units='cm',res=300)
   plot(x,y,type='p',lwd=4,col='blue',xlab='x',ylab='y',las=1,cex=0.6,cex.lab=1.5)
   abline(outSLR,col='blue')
   lines(xpCI,CI1x1,col='red',lty=1) # single point CI
