@@ -36,7 +36,7 @@ print(c(round(Rsqa,4),' Rsqa'))
 ModelNumber = c(10,12,14,16,2,6,4,8,11,15,9,13,1,3,5,7)
 sflag = 1
 if (sflag == 1) {
-  # png('RsqZar20d1Ex220319.png',width=16,height=12,units='cm',res=300)
+  # png('RsqZar20d1Ex220319.png',width=16,height=16,units='cm',res=300)
   plot(ModelNumber,Rsqa,type='p',lwd=4,col='blue',xlab='Model #',ylab=NA,las=1,cex=0.6,cex.lab=1.5)
   title(ylab=TeX('$R^2$'),cex.lab=1.5,line=2.5)
   # dev.off()
