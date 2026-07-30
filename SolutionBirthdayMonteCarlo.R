@@ -1,5 +1,6 @@
 print('file: SolutionBirthdayMonteCarlo.R')
 # probability for people having birthday at same day
+# update: 7/2026 more detailed output
 set.seed(1953) # set seed for random number generators
 M = 1e5        # number of Monte Carlo runs
 f2 = 0; f4 = 0; f6 = 0; f8 = 0; fg8 = 0; fg1 = 0 # frequencies
@@ -19,15 +20,43 @@ for(k in 1:M) {
 }
 print(c(n,'n'))
 print(c(M,'M'))
-p2 = f2/M; print(c(p2,'p2'))
-p4 = f4/M; print(c(p4,'p4'))
-p6 = f6/M; print(c(p6,'p6'))
-p8 = f8/M; print(c(p8,'p8'))
+p2 = f2/M; print(c(p2,'p2: 1 x 2: prob(2 birthdays on same day)'))
+p4 = f4/M; print(c(p4,'p4: 2 x 2 or 1 x 4'))
+p6 = f6/M; print(c(p6,'p6: 3 x 2 or 2 x 3'))
+p8 = f8/M; print(c(p8,'p8: 4 x 2 or ...'))
 pg8 = fg8/M; print(c(pg8,'pg8'))
 pg1 = fg1/M; print(c(pg1,'pg1'))  # all in one
+print('Probability for at least 2 have birthday on the same date')
+print('Monte Carlo simulation:')
 print(c(p2+p4+p6+p8+pg8,'p2+p4+p6+p8+pg8'))
-print('Probability for at least 2 have birthday on the same date:')
+print('--------------------------------------------------')
+print(' (6) Analytical solution for at least 2 have birthday on the same date')
+print('--------------------------------------------------')
 pnbN = 1;
 for(k in 2:n) pnbN = pnbN*(366-k)/365; # probability for no joint birthday
 pb = 1-pnbN  # probability for joint birthday
-print(c(round(pb,4),'pb'))
+print('Probability for at least 2 have birthday on the same date')
+print('analytic solution:')
+print(c(round(pb,5),'pb'))
+(d = (pg1-pb)/(pg1+pb)*200) # (%) -0.037
+# -----------------------------------------------------------------
+# [1] "file: SolutionBirthdayMonteCarlo.R"
+# [1] "26" "n" 
+# [1] "1e+05" "M"    
+# [1] "0.38418"                                 
+# [2] "p2: 1 x 2: prob(2 birthdays on same day)"
+# [1] "0.15516"            "p4: 2 x 2 or 1 x 4"
+# [1] "0.04374"            "p6: 3 x 2 or 2 x 3"
+# [1] "0.01176"          "p8: 4 x 2 or ..."
+# [1] "0.00318" "pg8"    
+# [1] "0.59802" "pg1"    
+# [1] "Probability for at least 2 have birthday on the same date"
+# [1] "Monte Carlo simulation:"
+# [1] "0.59802"         "p2+p4+p6+p8+pg8"
+# [1] "--------------------------------------------------"
+# [1] " (6) Analytical solution for at least 2 have birthday on the same date"
+# [1] "--------------------------------------------------"
+# [1] "Probability for at least 2 have birthday on the same date"
+# [1] "analytic solution:"
+# [1] "0.59824" "pb"     
+# -----------------------------------------------------------------
